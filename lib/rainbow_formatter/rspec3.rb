@@ -1,7 +1,7 @@
 RSpec::Support.require_rspec_core "formatters/base_text_formatter"
 
 class RSpec3 < RSpec::Core::Formatters::BaseTextFormatter
-  RSpec::Core::Formatters.register self, :example_passed, :example_failed, :initialize
+  RSpec::Core::Formatters.register self, :example_passed, :example_failed, :example_pending, :start_dump, :initialize
 
   PI_3 = Math::PI / 3
 
@@ -26,6 +26,14 @@ class RSpec3 < RSpec::Core::Formatters::BaseTextFormatter
 
   def example_failed(_notification)
     output.print "\e[38;5;9mNO\e[0m"
+  end
+
+  def example_pending(_notification)
+    output.print ConsoleCodes.wrap('*', :white)
+  end
+
+  def start_dump(_notification)
+    output.puts
   end
 
   def rainbow
