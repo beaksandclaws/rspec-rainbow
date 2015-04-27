@@ -1,8 +1,8 @@
 # :rainbow: rspec-rainbow
 
-Adds some color to your rspec tests!
+Adds some color (and happiness) to your rspec tests!
 
-![rspec rainbow](https://raw.githubusercontent.com/mscoutermarsh/rspec-rainbow/master/rspec-rainbow.jpg)
+![rspec rainbow](https://raw.githubusercontent.com/mscoutermarsh/rspec-rainbow/master/rspec-rainbow.png)
 
 ## Installation
 
